@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @registro.correo %>
+</p>
+
+<p>
+  <strong>Tipo doc:</strong>
+  <%= @registro.tipo_doc %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @registro.documento %>
+</p>
+
+<%= link_to 'Edit', edit_registro_path(@registro) %> |
+<%= link_to 'Back', registros_path %>

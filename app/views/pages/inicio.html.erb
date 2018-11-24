@@ -1,0 +1,40 @@
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+</head>
+
+
+<div class="container">    
+  <div class="row content">
+    <div class="col-sm-9 text-left"> 
+      <h1>Buscas estacionamiento?</h1>
+         <label>Encuentralo aqui</label>
+		      <div class="form-group">
+          <%= form_tag(parkings_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Ingrese el distrito...",:class => 'form-control' %>
+          <br> 
+          <%= submit_tag "Buscar Estacionamiento", :class=>"btn btn-xs left" %>
+          <% end %>
+          </div>
+		   </div>
+		  </div>
+		</div>
+
+    <div>
+      <h3><%= link_to "Regístrate", new_user_path  %></h3>
+      <p>Escuentra un estappcionamiento cerca</p>
+    </div>
+  <div class="col-sm-9 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+  </div>
+		</div>
+		</div>  
+  
+</div>
+

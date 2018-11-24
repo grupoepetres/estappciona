@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parkings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Distrito</th>
+      <th>Precioxhora</th>
+      <th>Ubicacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parkings.each do |parking| %>
+      <tr>
+        <td><%= parking.nombre %></td>
+        <td><%= parking.direccion %></td>
+        <td><%= parking.distrito %></td>
+        <td><%= parking.precioxhora %></td>
+        <td><%= parking.ubicacion %></td>
+        <td><%= link_to 'Show', parking %></td>
+        <td><%= link_to 'Edit', edit_parking_path(parking) %></td>
+        <td><%= link_to 'Destroy', parking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parking', new_parking_path %>
